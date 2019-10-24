@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:scrollbars="none">
+	<RelativeLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="@dimen/padding_40"
+		android:id="@+id/mainRelative"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:clickable="true">
+
+		<RelativeLayout
+			android:id="@+id/relativeLogo"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true">
+
+			<ImageView
+				android:id="@+id/logo"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_centerHorizontal="true"
+				android:src="@drawable/roostio_logo"
+				android:layout_marginTop="@dimen/margin_60"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentBottom="true"
+			android:layout_below="@id/relativeLogo">
+
+			<EditText
+				android:id="@+id/txtUserName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="User Name" 
+				android:layout_below="@id/logo"
+				android:maxLines="1"
+				android:singleLine="true"
+				android:inputType="textCapSentences"
+				android:layout_marginTop="@dimen/margin_100"/>
+
+			<EditText 
+				android:id="@+id/txtPasword"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Password"
+				android:inputType="textWebPassword"
+				android:layout_below="@id/txtUserName"
+				android:maxLines="1"
+				android:singleLine="true"
+				android:layout_marginTop="@dimen/margin_03"/>
+
+			<CheckBox
+				android:id="@+id/checkRemeberMe"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Remember me"
+				android:layout_below="@id/txtPasword"
+				android:textSize="18sp"
+				android:textColor="@color/colorblack"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<Button
+				android:id="@+id/btnLogin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/action_login"
+				android:background="#c6c6c6"
+				android:layout_below="@id/checkRemeberMe"
+				android:layout_marginTop="@dimen/margin_40"/>
+
+			<Button
+				android:id="@+id/btnSignUp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/action_signup"
+				android:textColor="@color/colorwhite"
+				android:background="#c6c6c6"
+				android:layout_below="@id/btnLogin"
+				android:layout_marginTop="@dimen/margin_20"/>
+
+			<TextView 
+				android:id="@+id/tvForgetPwd"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textColor="@color/colorblack"
+				android:textSize="20sp"
+				android:layout_below="@id/btnSignUp"
+				android:layout_marginTop="@dimen/margin_20"/>
+		</RelativeLayout>
+	</RelativeLayout>
+</ScrollView>

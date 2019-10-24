@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">EmployeeManagement</string>
+    <string name="action_settings">Settings</string>
+  <string name="action_login">Login</string>
+  <string name="action_signup">Sign Up</string>
+  <string name="action_rmeberme">Remeber Me</string>
+  <string name="action_forgetPassword">Forget your password</string>
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
+
+  
+  <string-array name="designation_array">
+    <item>Select Designation</item>
+    <item>Designer</item>
+    <item>Devloper</item>
+    <item>Tester</item>
+  </string-array>
+
+  <string name="require_all_Details">All Details are mandatory</string>
+  <string name="invalid_credential">Invalid Username and Password</string>
+  <string name="somthing_wrong">Somthing is wrong</string>
+  <string name="enable_permission">Please Enable Permissions</string>
+  <string name="image_not_selected">Problem in Uploading file</string>
+  <string name="upload_fail">Upload not supported</string>
+  <string name="fatch_location">Problem in Fatching Location</string>
+  <string name="conf_password">Password not matched</string>
+</resources>

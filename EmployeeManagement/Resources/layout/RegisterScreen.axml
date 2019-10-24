@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:scrollbars="none">
+
+	<RelativeLayout
+		android:id="@+id/mainView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"		
+		android:focusable="true"
+		android:focusableInTouchMode="true"		
+		android:padding="@dimen/padding_40"
+		android:clickable="true">
+
+		<TextView
+			android:id="@+id/tvTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Register"
+			android:textSize="30sp"
+			android:gravity="center_horizontal"
+			android:padding="20dp"/>
+
+		<EditText
+			android:id="@+id/txtFirstName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="First Name"
+			android:layout_below="@id/tvTitle"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:inputType="textNoSuggestions"/>
+
+		<EditText
+			android:id="@+id/txtLastName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Last Name"
+			android:layout_below="@id/txtFirstName"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:inputType="textNoSuggestions"/>
+
+		<EditText
+			android:id="@+id/txtUserName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="User Name"
+			android:layout_below="@id/txtLastName"
+			android:maxLines="1"
+			android:singleLine="true"
+			android:inputType="textNoSuggestions"/>
+
+		<EditText
+			android:id="@+id/txtPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Password"			
+			android:inputType="textWebPassword"
+			android:layout_below="@id/txtUserName"
+			android:maxLines="1"
+			android:singleLine="true"/>
+
+		<EditText
+			android:id="@+id/txtConfPassword"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Confirm Password"			
+			android:inputType="textWebPassword"
+			android:layout_below="@id/txtPassword"
+			android:maxLines="1"
+			android:singleLine="true"/>
+
+		<RadioGroup
+				android:id="@+id/rgGroup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_below="@id/txtConfPassword">
+				<RadioButton
+					android:id="@+id/rgMale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Male"/>
+
+				<RadioButton
+					android:id="@+id/rgFemale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Female"/>
+		</RadioGroup>
+
+		<ImageView
+			android:id="@+id/imgProfile"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:layout_below="@id/rgGroup"
+			android:foregroundGravity="center_horizontal"
+			android:backgroundTint="#c6c6c6"
+			android:background="@drawable/outline_person_outline_white_48"/>
+
+		<Button
+			android:id="@+id/btnRegister"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Register"
+			android:layout_below="@id/imgProfile"
+			android:layout_centerHorizontal="true"
+			android:textColor="#000"/>
+
+		<TextView
+			android:id="@+id/txt_location"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="10sp"
+			android:layout_below="@id/btnRegister"
+			android:gravity="center_horizontal"
+			android:padding="@dimen/padding_20"/>
+	
+	</RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:descendantFocusability="blocksDescendants">
+
+	<ImageView  
+        android:id="@+id/photoImageView"  
+        android:layout_width="60dp"  
+        android:layout_height="60dp"  
+        android:layout_alignParentLeft="true"  
+        android:layout_centerVertical="true"  
+        android:padding="5dp" />  
+    <TextView  
+        android:id="@+id/nameTextView"  
+        android:layout_toRightOf="@id/photoImageView"  
+        android:textAppearance="?android:attr/textAppearanceLarge"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+		android:text="Name"
+        android:paddingLeft="5dp" />  
+    <TextView  
+        android:id="@+id/designationTextView"  
+        android:layout_toRightOf="@id/photoImageView"  
+        android:layout_below="@id/nameTextView"  
+        android:textAppearance="?android:attr/textAppearanceSmall"  
+        android:layout_width="wrap_content"  
+        android:layout_height="wrap_content"
+		android:text="Name"
+        android:paddingLeft="5dp" />  
+	
+	<ImageButton
+		android:id="@+id/btnDelete"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_bin"
+		android:background="@android:color/transparent"
+		android:layout_alignParentRight="true"
+		android:layout_marginRight="10dp"/>
+
+	<ImageButton
+		android:id="@+id/btnUpdate"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/ic_edit"
+		android:background="@android:color/transparent"
+		android:layout_toLeftOf="@id/btnDelete"
+		android:layout_marginRight="10dp"/>
+</RelativeLayout>

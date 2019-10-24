@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:fillViewport="true"
+	android:scrollbars="none">
+
+	<RelativeLayout 
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="@dimen/padding_30"
+		android:id="@+id/mainRelative"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:clickable="true"
+		>
+
+		<RelativeLayout
+			android:id="@+id/relativeTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true">
+
+			<TextView
+				android:id="@+id/title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_centerHorizontal="true"
+				android:text="Employee Detail"
+				android:textSize="30sp"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<ImageView
+			android:id="@+id/imgProfile"
+			android:layout_width="200dp"
+			android:layout_height="200dp"
+			android:layout_below="@id/title"
+			android:foregroundGravity="center_horizontal"
+			android:backgroundTint="#c6c6c6"
+			android:layout_marginTop="@dimen/margin_10"
+			android:background="@drawable/outline_person_outline_white_48"/>
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_alignParentBottom="true"
+			android:layout_below="@id/relativeTitle">
+
+			<EditText
+				android:id="@+id/txtName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Enter Name" 
+				android:drawableLeft="@drawable/user"
+				android:drawableTint="@android:color/black"
+				android:drawablePadding="@dimen/padding_03"
+				
+				android:maxLines="1"
+				android:singleLine="true"
+				android:inputType="textNoSuggestions"
+				android:layout_marginTop="@dimen/margin_20"/>
+
+			<EditText
+				android:id="@+id/txtUserName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Enter User Name" 
+				android:drawableLeft="@drawable/user"
+				android:drawableTint="@android:color/black"
+				android:drawablePadding="@dimen/padding_03"
+				android:layout_below="@id/txtName"
+				android:maxLines="1"
+				android:singleLine="true"
+				android:inputType="textNoSuggestions"/>
+
+			<EditText
+				android:id="@+id/txtPassword"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Enter Password" 
+				android:drawableLeft="@drawable/lock"
+				android:drawableTint="@android:color/black"
+				android:drawablePadding="@dimen/padding_03"
+				android:layout_below="@id/txtUserName"
+				android:maxLines="1"
+				android:singleLine="true"
+				android:inputType="textPassword"/>
+
+			<EditText 
+				android:id="@+id/txtDate"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Enter Date"
+				android:inputType="date"
+				android:drawableLeft="@drawable/calendar"
+				android:drawablePadding="@dimen/padding_03"
+				android:layout_below="@id/txtPassword"
+				android:maxLines="1"
+				android:singleLine="true"
+				android:clickable="true"
+				android:editable="false"
+				android:focusableInTouchMode="false"
+				android:drawableTint="@android:color/black"
+				android:layout_marginTop="@dimen/margin_03"/>
+
+			
+			<RadioGroup
+				android:id="@+id/rgGroup"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:layout_below="@id/txtDate">
+				<RadioButton
+					android:id="@+id/rgMale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Male"/>
+
+				<RadioButton
+					android:id="@+id/rgFemale"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Female"/>
+			
+			</RadioGroup>
+
+
+			<CheckBox
+				android:id="@+id/checkSinging"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Singing"
+				android:layout_below="@id/rgGroup"
+				android:textSize="18sp"
+				android:textColor="@color/colorblack"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<CheckBox
+				android:id="@+id/checkDancing"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Dancing"
+				android:layout_below="@id/checkSinging"
+				android:textSize="18sp"
+				android:textColor="@color/colorblack"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<CheckBox
+				android:id="@+id/checkOutdoorGame"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Outdoor Game"
+				android:layout_below="@id/checkDancing"
+				android:textSize="18sp"
+				android:textColor="@color/colorblack"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+				<CheckBox
+				android:id="@+id/checkIndoorGame"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Indoor Game"
+				android:layout_below="@id/checkOutdoorGame"
+				android:textSize="18sp"
+				android:textColor="@color/colorblack"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<Spinner
+				android:id="@+id/designationList"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/checkIndoorGame"
+				android:entries="@array/designation_array"
+				android:layout_marginTop="@dimen/margin_10"/>
+
+			<Button
+				android:id="@+id/btnRegister"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Submit"
+				android:background="@drawable/loginroundedbutton"
+				android:layout_below="@id/designationList"
+				android:layout_marginTop="@dimen/margin_40"
+				android:layout_marginBottom="@dimen/margin_10"/>
+
+		</RelativeLayout>
+	</RelativeLayout>
+</ScrollView>
